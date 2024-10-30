@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bipccxcjugxca"
+path="res://.godot/imported/HumanFinalNoHair.obj-46e6b64fb40d838881fde00f506d3943.mesh"
+
+[deps]
+
+files=["res://.godot/imported/HumanFinalNoHair.obj-46e6b64fb40d838881fde00f506d3943.mesh"]
+
+source_file="res://Models/HumanFinalNoHair.obj"
+dest_files=["res://.godot/imported/HumanFinalNoHair.obj-46e6b64fb40d838881fde00f506d3943.mesh", "res://.godot/imported/HumanFinalNoHair.obj-46e6b64fb40d838881fde00f506d3943.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
