@@ -1,5 +1,7 @@
 extends Node2D
 
+# Hi!
+
 var rng = RandomNumberGenerator.new()
 
 var arraytofill = []
