@@ -1,0 +1,126 @@
+[gd_scene load_steps=4 format=3 uid="uid://vbsg5hilqbfw"]
+
+[ext_resource type="Script" path="res://Scripts/Flag_test.gd" id="1_khdo3"]
+
+[sub_resource type="TextMesh" id="TextMesh_iirod"]
+text = "New Flag:"
+
+[sub_resource type="MeshTexture" id="MeshTexture_dr7gt"]
+
+[node name="Flag" type="Node2D"]
+script = ExtResource("1_khdo3")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(1232, 312)
+scale = Vector2(177.504, -199.088)
+mesh = SubResource("TextMesh_iirod")
+texture = SubResource("MeshTexture_dr7gt")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 1039.0
+offset_top = 110.0
+offset_right = 1084.0
+offset_bottom = 130.0
+
+[node name="Button_NewFlag" type="Button" parent="."]
+offset_left = 630.0
+offset_top = 303.0
+offset_right = 709.0
+offset_bottom = 334.0
+text = "New Flag"
+
+[node name="Button_SaveImage" type="Button" parent="."]
+offset_left = 966.0
+offset_top = 301.0
+offset_right = 1062.0
+offset_bottom = 332.0
+text = "Save Image"
+
+[node name="Button_SaveList" type="Button" parent="."]
+offset_left = 793.0
+offset_top = 303.0
+offset_right = 869.0
+offset_bottom = 334.0
+text = "Save List"
+
+[node name="Paste_Text_Here" type="TextEdit" parent="."]
+offset_left = 625.0
+offset_top = 358.0
+offset_right = 995.0
+offset_bottom = 487.0
+placeholder_text = "Paste List Here"
+
+[node name="Ready!" type="Button" parent="."]
+offset_left = 1011.0
+offset_top = 357.0
+offset_right = 1071.0
+offset_bottom = 485.0
+text = "Ready!"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+offset_left = 966.0
+offset_top = 227.0
+offset_right = 1040.0
+offset_bottom = 269.0
+
+[node name="Length_Text" type="PanelContainer" parent="."]
+offset_left = 25.0
+offset_top = 600.0
+offset_right = 105.0
+offset_bottom = 640.0
+
+[node name="LineEdit" type="LineEdit" parent="Length_Text"]
+layout_mode = 2
+text = "384"
+placeholder_text = "Length"
+
+[node name="Height_Text" type="PanelContainer" parent="."]
+offset_left = 120.0
+offset_top = 600.0
+offset_right = 200.0
+offset_bottom = 640.0
+
+[node name="LineEditH" type="LineEdit" parent="Height_Text"]
+layout_mode = 2
+text = "216"
+placeholder_text = "Height"
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 250.0
+offset_top = 612.0
+offset_right = 442.0
+offset_bottom = 637.0
+
+[node name="Ratio" type="RichTextLabel" parent="."]
+offset_left = 260.0
+offset_top = 612.0
+offset_right = 452.0
+offset_bottom = 637.0
+text = "Ratio (Standard is 16:9)"
+
+[node name="Make3D" type="Button" parent="."]
+visible = false
+offset_left = 836.0
+offset_top = 196.0
+offset_right = 925.0
+offset_bottom = 233.0
+text = "View in 3D"
+
+[node name="Save_Location" type="PanelContainer" parent="."]
+offset_left = 700.0
+offset_right = 1100.0
+offset_bottom = 31.0
+
+[node name="LineEditSL" type="LineEdit" parent="Save_Location"]
+layout_mode = 2
+placeholder_text = "Save Location"
+
+[connection signal="pressed" from="Button_NewFlag" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button_SaveImage" to="." method="_on_button_save_image_pressed"]
+[connection signal="pressed" from="Button_SaveList" to="." method="_on_button_save_list_pressed"]
+[connection signal="pressed" from="Ready!" to="." method="_on_ready_pressed"]
+[connection signal="text_changed" from="Length_Text/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_change_rejected" from="Height_Text/LineEditH" to="." method="_on_line_edit_h_text_change_rejected"]
+[connection signal="text_changed" from="Height_Text/LineEditH" to="." method="_on_line_edit_w_text_changed"]
+[connection signal="pressed" from="Make3D" to="." method="_on_make_3d_pressed"]
+[connection signal="text_changed" from="Save_Location/LineEditSL" to="." method="_on_line_edit_sl_text_changed"]

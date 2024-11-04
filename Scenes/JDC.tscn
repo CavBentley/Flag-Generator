@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqcgb51efqo3c"]
+
+[ext_resource type="Script" path="res://Scripts/Flag_test.gd" id="1_xqpv3"]
+
+[node name="Flag" type="Node2D"]
+script = ExtResource("1_xqpv3")
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = 614.0
+offset_top = 299.0
+offset_right = 658.0
+offset_bottom = 323.0
+button_pressed = true
+
+[node name="@ColorRect@2" type="ColorRect" parent="."]
+offset_right = 384.0
+offset_bottom = 216.0
+color = Color(0.299568, 0.0191799, 0.326566, 1)
+
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
